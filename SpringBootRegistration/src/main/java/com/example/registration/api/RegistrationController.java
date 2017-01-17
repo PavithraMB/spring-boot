@@ -10,9 +10,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class RegistrationController {
-	 @RequestMapping("/")
-	    public String index() {
-	        return "Hello World!";
-	    }
+@RequestMapping("/api/registration")
+public class RegistrationController {	 
+	@RequestMapping(method=RequestMethod.GET)
+	public String info() {
+		return "Registration Service - V 1.0";
+	}
 }
